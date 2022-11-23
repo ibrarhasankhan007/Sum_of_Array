@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>add_ip</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>reset</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>reset</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">reset</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>add_ip</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>16a01b74</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>add_ip</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>16a01b74</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>reset</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>start</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>MAX</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>addr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>done</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sum</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>add_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_16a01b74</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>add_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/add_ip_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>add_ip_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">add_ip_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">versal</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">akintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus58g</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>add_ip_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>11</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-11-21T14:59:46Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2850288e_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a2946b_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d1570ba_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@51c61abb_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6cd4014c_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3ee5b053_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e5b0356_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@437b64d8_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b1d3ca0_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65982178_ARCHIVE_LOCATION">c:/users/ibrar/onedrive/desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7faf37e9_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29860132_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@21a4332_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a53e1c3_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@60d99edd_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@438a3ac4_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ac6713_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a4ce55a_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10eef9e1_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f6f8f52_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5da9e120_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@744fcd70_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@779e1122_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@62a0eab6_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@211e06d7_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57c0f823_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41e00598_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35b9bf8c_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6170d4c4_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78243bc1_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@51527d08_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c27e832_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2fbc36e2_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@397e2b05_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d383f7c_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c66ab0b_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17e4b5c5_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7aada100_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@21e21878_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17208644_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5866cae_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c502fff_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d81fe57_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f60fa09_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c3d4389_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@532056a7_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a52c51b_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3597111_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76f7a69d_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@63487ce4_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79f85248_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7883a120_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@547e6b0f_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26a0bbfd_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@583895b6_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10056563_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@167ad27e_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ef773a8_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@532d712b_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58e77150_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17bfb20d_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f42621d_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56d5dbce_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42a75450_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77cb6af4_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16395bc7_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44c3c3ce_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@40ab463e_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2549d2fd_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c3fb814_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4fc3ef4c_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a5796bf_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59152059_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54967f17_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@242d2206_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43bd336_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4344e0f6_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73c47f3f_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6425802_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2951a457_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e8e21ac_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48b12784_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@182d89c_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d9a7f59_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b2d7b03_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7cf32bff_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c730faa_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@263c4d5a_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@12bfe708_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@172347d1_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d77db53_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b5f3131_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@127a739a_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73e0308d_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ccf3377_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3289af63_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3cfd456f_ARCHIVE_LOCATION">c:/Users/Ibrar/OneDrive/Desktop/vivado/add_ip/add_ip.srcs/sources_1/new</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="06485391"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="1fc733a1"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a1b08bce"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
